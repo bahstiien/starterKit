@@ -3,7 +3,7 @@ FROM node:16-alpine
 ENV NODE_ENV development
 
 #add turborepo
-RUN yarn global add turbo
+RUN yarn global add turbo@1.5.5
 
 #add strapi
 RUN yarn global add @strapi/strapi@${STRAPI_VERSION}
