@@ -1,14 +1,7 @@
-const withTM = require('next-transpile-modules')(['ui']);
-const withPWA = require('next-pwa');
-
-module.exports = withTM({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-});
+  swcMinify: true,
+}
 
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    register: true,
-    skipWaiting: true,
-  },
-});
+module.exports = nextConfig
